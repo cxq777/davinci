@@ -20,8 +20,6 @@
 package edp.core.utils;
 
 import com.alibaba.druid.util.StringUtils;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
 import edp.davinci.core.enums.ActionEnum;
 import edp.davinci.core.enums.FileTypeEnum;
 import edp.davinci.core.enums.LogNameEnum;
@@ -299,9 +297,11 @@ public class FileUtils {
 
             FileOutputStream output = new FileOutputStream(filepath);
             //将图片按JPEG压缩
-            JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(output);
-            encoder.encode(img_dest);
-            output.close();
+//            JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(output);
+//            encoder.encode(img_dest);
+//            output.close();
+
+            ImageIO.write(img_dest ,"png",output);
 
             return new File(filepath);
         } catch (Exception e) {
