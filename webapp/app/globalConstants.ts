@@ -23,7 +23,7 @@ export const API_HOST = '/api/v3'
 export const SHARE_HOST = `${location.origin}/share.html`
 export const EXTERNAL_LOG_OUT_URL = '/login/oauth2/logout'
 
-const defaultEchartsTheme = require('assets/json/echartsThemes/default.project.json')
+const defaultEchartsTheme = require('assets/json/echartsThemes/chalk.project.json')
 export const DEFAULT_ECHARTS_THEME = defaultEchartsTheme.theme
 export const DEFAULT_PRIMARY_COLOR = '#1B98E0'
 export const DEFAULT_SECONDARY_COLOR = '#223151'
